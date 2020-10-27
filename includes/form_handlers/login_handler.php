@@ -11,7 +11,7 @@ if(isset($_POST['login_button'])){
         $row = mysqli_fetch_array($check_database_query);
         $username = $row['username'];
 
-        $_SEESSION['username'] = $username;
+        $_SESSION['username'] = $username;
     header("Location: index.php");
     }
 }
