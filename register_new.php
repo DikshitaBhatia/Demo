@@ -14,14 +14,21 @@
 
 <body>
     <form action="register_new.php" method="POST">
-        <input type="email" name="log_email" placeholder="Email Address" >
+        <input type="email" name="log_email" placeholder="Email Address" value="<?php
+        if(isset($_SESSION['log_email'])) {
+          echo "$_SESSION['log_email']"?>" required
+          >
         <br>
         <input type="password" name="log_password" placeholder="Password" >
         <br>
         <input type="submit" name="login_button" class="btn" value="Login">
-    </form>
+  <?php
+  if(in_array("Email or password is incorrect", $errpr_array))
+  echo "Email / Password Incorrect";
+  ?>
+      </form>
     <form action="register_new.php" method="POST">
-        <input type="text" name="reg_fname" placeholder="First Name" value="?php if(isset($_SESSION['reg_fname'])){
+        <input type="text" name="reg_fname" placeholder="First Name" value="<?php if(isset($_SESSION['reg_fname'])){
             echo $_SESSION['reg_fname'] ;
           }
           ?>" required>
