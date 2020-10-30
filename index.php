@@ -1,8 +1,13 @@
-<?php
-include("includes/header.php");
+<?php  
+require 'config/config.php';
 
 ?>
 
-    HEY PEEPS!!!
+<html>
+<head>
+	<title>Welcome to Socionet</title>
+</head>
+<body>
+	Hello 
 </body>
 </html>
