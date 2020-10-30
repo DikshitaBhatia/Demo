@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['login_button'])){
-    $email = filter_var($_POST['login_email'], FILTER_SANITIZE_EMAIL);//sanitize email
+    $email = filter_var($_POST['log_email'], FILTER_SANITIZE_EMAIL);//sanitize email
     $_SESSION['log_emqail'] = $email;
     $password = md5($_POST['log_password']);
 
